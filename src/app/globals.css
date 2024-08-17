@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.home-logo-style{
+    font-family: 'Indie Flower';
+}
+
+body{
+    background-color: #ffffff !important;
+}
