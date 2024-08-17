@@ -1,4 +1,4 @@
-This is a clone app of GOOGLE forms and the site is live at [`placeform`](https://placeform.vercel.app/)
+This is a clone app of GOOGLE forms and the site is live at [`FormPlace`](https://FormPlace.vercel.app/)
 
 ## Getting Started
 First, install packages:

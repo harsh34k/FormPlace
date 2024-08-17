@@ -13,14 +13,14 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PlaceForm- Your Ultimate Form and Quiz Creator!",
-  description: "Elevate your form creation game with placeForm – the platform that goes beyond expectations. ",
+  title: "FormPlace- Your Ultimate Form and Quiz Creator!",
+  description: "Elevate your form creation game with FormPlace – the platform that goes beyond expectations. ",
   other: {
     "google-site-verification": "1z_0Kzwtz-_yVauIBmnCbNouK8QUZvm_A14JDoyGWoI",
   },
   openGraph: {
-    title: "PlaceForm- Your Ultimate Form and Quiz Creator!",
-    description: "Elevate your form creation game with placeForm – the platform that goes beyond expectations. ",
+    title: "FormPlace- Your Ultimate Form and Quiz Creator!",
+    description: "Elevate your form creation game with FormPlace – the platform that goes beyond expectations. ",
     type: "website",
     url: process.env.NEXT_PUBLIC_WEBSITE_URL,
     images: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         url: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/images/logo.png`,
         width: 1200,
         height: 630,
-        alt: "PlaceForm",
+        alt: "FormPlace",
       },
     ],
   },

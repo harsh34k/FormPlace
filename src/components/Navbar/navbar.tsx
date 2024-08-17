@@ -28,7 +28,7 @@ export default async function Navbar() {
               src="/images/logo.png"
               width={40}
               height={40}
-              alt="placeForm logo"
+              alt="FormPlace logo"
             />
             </Link>
           </span>

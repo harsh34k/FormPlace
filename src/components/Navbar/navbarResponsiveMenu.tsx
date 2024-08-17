@@ -33,7 +33,7 @@ export default function NavbarResponsiveMenu(user:iNavbarResponsiveMenu) {
                 <div className="flex items-center justify-between">
                   <div className="inline-flex items-center space-x-2">
                     <span className="font-bold text-2xl home-logo-style">
-                      <Link href="/">placeForm</Link>
+                      <Link href="/">FormPlace</Link>
                     </span>
                   </div>
                   <div className="-mr-2">

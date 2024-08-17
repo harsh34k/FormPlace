@@ -7,7 +7,7 @@ import Image from 'next/image'
 const whyChooseUs = [
   {
     title:"All-in-One Solution",
-    content:"Craft quizzes, surveys, and forms with ease. No need for multiple platforms – placeForm is your one-stop destination."
+    content:"Craft quizzes, surveys, and forms with ease. No need for multiple platforms – FormPlace is your one-stop destination."
   },
   {
     title:"User-Friendly Interface",
@@ -33,10 +33,10 @@ export default function Home() {
               {/* <div className="rounded-full bg-white p-1 px-2">
                 <p className="text-sm font-medium">We&apos; hiring</p>
               </div> */}
-              <p className="text-sm font-medium">Welcome to placeForm &rarr;</p>
+              <p className="text-sm font-medium">Welcome to FormPlace &rarr;</p>
             </div>
             <h1 className="mt-8 text-3xl font-bold tracking-tight text-black md:text-4xl lg:text-6xl">
-            Elevate your form creation game with placeForm
+            Elevate your form creation game with FormPlace
             </h1>
             <p className="mt-8 text-lg text-gray-700">
             The platform that goes beyond expectations. Whether you&apos;re crafting engaging quizzes or creating versatile forms, we&apos;ve got you covered. Unleash your creativity, gather valuable insights, and streamline data collection with our intuitive form builder.
@@ -161,7 +161,7 @@ export default function Home() {
         <div>
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
-            Why Choose placeForm?
+            Why Choose FormPlace?
             </h2>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-gray-600 lg:mx-auto">
             Our Vision is to be the leading platform that seamlessly combines form and quiz creation, offering unparalleled versatility to our users.
