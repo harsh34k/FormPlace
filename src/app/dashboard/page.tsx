@@ -9,10 +9,11 @@ export const metadata: Metadata = {
 
 
 export default function Form() {
-  
+
   return (
     <>
-      <FormTable/>
+
+      <FormTable />
     </>
   );
 }

@@ -90,7 +90,7 @@ function FormTable() {
       />
     );
   return (
-    <div className="w-screen h-full overflow-hidden">
+    <div className="w-full h-screen overflow-hidden">
       <section className="mx-auto w-full max-w-7xl px-4 py-4">
         <div className="flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0">
           <div>
