@@ -16,21 +16,25 @@ function GenerateWithAI() {
       .post("/api/generate", { prompt })
       .then((res) => {
         setLoading(false);
-        const data=res.data
-        if(data.status===400){
+        const data = res.data
+        console.log("data from generate api", data);
+
+        if (data.status === 400) {
           alert(data.msg)
         }
-        if(data.status===200){
+        if (data.status === 200) {
           return router.push(`/quiz/v/${data?.quiz?._id}/edit`);
         }
       })
       .catch((err) => {
         setLoading(false);
+        console.log("Error in generating a quiz", err);
+
         alert("Error in generating a quiz");
         console.log(err);
       });
   }
-  if(loading) return <Loader/>
+  if (loading) return <Loader />
   return (
     <section className="w-screen h-screen ">
       <div className="h-5/6 flex justify-center items-center">

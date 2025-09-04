@@ -27,32 +27,32 @@ export async function POST(request: Request) {
     const genAI = new GoogleGenerativeAI(
       process.env.GOOGLE_GENERATIVE_TOKEN as string
     );
-    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-pro" });
 
     const prompt = `Generate a JSON response exclude any unwanted space just give a simple json output in this format {quiztitle: "title", quizdescription: "description", questions: [{title: "question", options: ["option1", "option2", "option3", "option4"], correctOption: index of the option}, ...], which has a quiz title and decription and 10 quiz on the topic '${body.prompt}' `;
 
     const result = await model.generateContent(prompt);
     const response = await result.response;
     const text = response.text();
-    const filteredText = text.replaceAll("```json", " ").replaceAll("``` json", " ").replaceAll("'''", " ").replaceAll("..."," ").replaceAll("```"," ");
+    const filteredText = text.replaceAll("```json", " ").replaceAll("``` json", " ").replaceAll("'''", " ").replaceAll("...", " ").replaceAll("```", " ");
     const parsedText = JSON.parse(filteredText);
-    const fields= parsedText.questions.map((question: any) =>  {
-        return {
-            ...question,
-            uniqueID:randomGenerator()
-        };
+    const fields = parsedText.questions.map((question: any) => {
+      return {
+        ...question,
+        uniqueID: randomGenerator()
+      };
     });
-    const quiz=await QUIZ.create({
+    const quiz = await QUIZ.create({
       created_by: UseronDB._id,
       state: "pending",
       title: parsedText?.quizTitle || parsedText?.quiztitle,
       description: parsedText?.quizDescription || parsedText?.quizdescription,
       fields,
     });
-    if(!quiz){
-        return Response.json({ msg: "Error while saving quiz", status: 400 });
+    if (!quiz) {
+      return Response.json({ msg: "Error while saving quiz", status: 400 });
     }
-    return Response.json({ quiz,text,parsedText,filteredText,status: 200 });
+    return Response.json({ quiz, text, parsedText, filteredText, status: 200 });
   } catch (error) {
     console.log("Error while generating a response", error);
     return Response.json({
