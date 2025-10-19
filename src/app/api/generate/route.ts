@@ -30,7 +30,7 @@ export async function POST(request: Request) {
     const genAI = new GoogleGenerativeAI(
       process.env.GOOGLE_GENERATIVE_TOKEN as string
     );
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-flash-latest" });
 
     // Lighter prompt with only 5 questions
     const prompt = `Generate a JSON response (no extra formatting, no markdown, no backticks). 
