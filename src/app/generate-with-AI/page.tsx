@@ -53,6 +53,7 @@ function GenerateWithAI() {
               Generate
             </button>
           </span>
+          <p className="text-gray-500 font-medium">Try prompt: Football</p>
         </div>
       </div>
     </section>
